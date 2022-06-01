@@ -1,12 +1,15 @@
-import { IsString } from 'class-validator';
+import { IsOptional, IsString } from 'class-validator';
 
-export class CreateIconDTO {
+export class RawCreateIconDTO {
   @IsString()
   readonly name: string;
 
+  @IsOptional()
+  @IsString({ each: true })
+  readonly keywords: string[] = [];
+}
+
+export class CreateIconDTO extends RawCreateIconDTO {
   @IsString()
   readonly path: string;
-
-  @IsString({ each: true })
-  readonly keywords: string[];
 }

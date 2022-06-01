@@ -10,8 +10,7 @@ export class IconService {
   constructor(@InjectModel(Icon.name) private iconModel: Model<IconDocument>) {}
 
   async create(createIconDTO: CreateIconDTO): Promise<Icon> {
-    const createdIcon = new this.iconModel(createIconDTO);
-    return createdIcon.save();
+    return this.iconModel.create(createIconDTO);
   }
 
   async query(paginationQueryDTO: PaginationQueryDTO) {

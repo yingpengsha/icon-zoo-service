@@ -1,8 +1,9 @@
-import { Prop, SchemaFactory } from '@nestjs/mongoose';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose from 'mongoose';
 
 export type IconDocument = Icon & Document;
 
+@Schema()
 export class Icon {
   @Prop({ type: mongoose.Schema.Types.String, required: true, trim: true })
   name: string;
