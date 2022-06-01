@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post, Query } from '@nestjs/common';
 import { CreateIconDTO } from './dto/create-icon.dto';
-import { QueryIconDTO } from './dto/query-icon.dto';
+import { PaginationQueryDTO } from './dto/pagination-query.dto';
 import { IconService } from './icon.service';
 
 @Controller('icon')
@@ -13,8 +13,7 @@ export class IconController {
   }
 
   @Get('query')
-  async query(@Query() FindIconDTO: QueryIconDTO) {
-    const response = [];
-    const skip = (FindIconDTO.pageNo - 1) * FindIconDTO.pageSize;
+  async query(@Query() paginationQueryDTO: PaginationQueryDTO) {
+    return this.iconService.query(paginationQueryDTO);
   }
 }

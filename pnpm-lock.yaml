@@ -10,6 +10,7 @@ specifiers:
   '@nestjs/testing': ^8.0.0
   '@types/express': ^4.17.13
   '@types/jest': 27.5.0
+  '@types/multer': ^1.4.7
   '@types/node': ^16.0.0
   '@types/supertest': ^2.0.11
   '@typescript-eslint/eslint-plugin': ^5.0.0
@@ -38,6 +39,7 @@ dependencies:
   '@nestjs/core': 8.4.5_9530c9e4e8c33b27551732908d05d2fb
   '@nestjs/mongoose': 9.1.0_d565c5c77e578653034a0bdfb1283934
   '@nestjs/platform-express': 8.4.5_c0c9651cd01c4e2d3bda397a5c438062
+  '@types/multer': 1.4.7
   class-transformer: 0.5.1
   class-validator: 0.13.2
   mongoose: 6.3.5
@@ -1070,13 +1072,11 @@ packages:
     dependencies:
       '@types/connect': 3.4.35
       '@types/node': 16.11.36
-    dev: true
 
   /@types/connect/3.4.35:
     resolution: {integrity: sha1-X89q5EXkAh0fwiGaSHPMc6O7KtE=}
     dependencies:
       '@types/node': 16.11.36
-    dev: true
 
   /@types/cookiejar/2.1.2:
     resolution: {integrity: sha512-t73xJJrvdTjXrn4jLS9VSGRbz0nUY3cl2DMGDU48lKl+HR9dbbjW2A9r3g40VA++mQpy6uuHg33gy7du2BKpog==}
@@ -1106,7 +1106,6 @@ packages:
       '@types/node': 16.11.36
       '@types/qs': 6.9.7
       '@types/range-parser': 1.2.4
-    dev: true
 
   /@types/express/4.17.13:
     resolution: {integrity: sha1-p24plXKJmbq1GjP6vOHXBaNwkDQ=}
@@ -1115,7 +1114,6 @@ packages:
       '@types/express-serve-static-core': 4.17.28
       '@types/qs': 6.9.7
       '@types/serve-static': 1.13.10
-    dev: true
 
   /@types/graceful-fs/4.1.5:
     resolution: {integrity: sha1-If+6DZjaQ1DbZIkfkqnl2zzbThU=}
@@ -1156,7 +1154,12 @@ packages:
 
   /@types/mime/1.3.2:
     resolution: {integrity: sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==}
-    dev: true
+
+  /@types/multer/1.4.7:
+    resolution: {integrity: sha1-ic8DVHwox7vMcm8Cnip2pyMsx54=}
+    dependencies:
+      '@types/express': 4.17.13
+    dev: false
 
   /@types/node/16.11.36:
     resolution: {integrity: sha512-FR5QJe+TaoZ2GsMHkjuwoNabr+UrJNRr2HNOo+r/7vhcuntM6Ee/pRPOnRhhL2XE9OOvX9VLEq+BcXl3VjNoWA==}
@@ -1171,18 +1174,15 @@ packages:
 
   /@types/qs/6.9.7:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
-    dev: true
 
   /@types/range-parser/1.2.4:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
-    dev: true
 
   /@types/serve-static/1.13.10:
     resolution: {integrity: sha1-9eDOh5fS18xevtpIpSyWxPpHqNk=}
     dependencies:
       '@types/mime': 1.3.2
       '@types/node': 16.11.36
-    dev: true
 
   /@types/stack-utils/2.0.1:
     resolution: {integrity: sha1-IPGClPeX8iCbX2XI47XI6CYdEnw=}
